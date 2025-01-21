@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 17 - Luyen tap 1</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f1f1; /* Màu nền nhẹ nhàng, lãng mạn */
+            color: #4a4a4a;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.pixabay.com/photo/2016/08/24/00/24/paris-1615336_960_720.jpg'); /* Hình nền Paris lãng mạn */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        header {
+            background-color: rgba(255, 182, 193, 0.8); /* Màu hồng nhẹ, tạo cảm giác ấm áp */
+            color: #fff;
+            padding: 20px;
+            font-size: 2rem;
+            text-align: center;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            text-align: justify;
+        }
+
+        .content h2 {
+            color: #ff6f61; /* Màu đỏ dịu nhẹ, lãng mạn */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .important {
+            color: #e91e63; /* Màu đỏ đậm của hoa hồng */
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: rgba(255, 182, 193, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1rem;
+            border-top: 3px solid #f8d7da;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bai 17 - Luyen tap 1</h1>
+    </header>
+
+    <div class="content">
+        <h2>Giải Thích Sự Khác Nhau Giữa Hai Định Dạng CSS</h2>
+        <p><strong>Giải thích sự khác nhau giữa hai định dạng sau trang 101 Tin học 12:</strong></p>
+
+        <p class="important">Hai định dạng CSS "#p123+ p" và "h2#p123 + p" khác nhau về cách chọn phần tử HTML để áp dụng định dạng.</p>
+
+        <p><strong>#p123 + p:</strong> Đây là một selector có kết hợp giữa ID selector và sibling combinator. Nó chọn các phần tử <code>p</code> là anh em liền kề (sibling) của phần tử có ID là "p123". Ví dụ, nếu có cấu trúc HTML như sau:</p>
+
+        <pre><code>
+        <p id="p123">Đoạn văn 1</p>
+        <p>Đoạn văn 2</p>
+        </code></pre>
+
+        <p>Trong trường hợp này, định dạng CSS <code>#p123 + p</code> sẽ áp dụng cho phần tử <code>p</code> thứ hai, vì nó là anh em liền kề của phần tử có ID là "p123".</p>
+
+        <p><strong>h2#p123 + p:</strong> Đây là một selector có kết hợp giữa element selector (<code>h2</code>), ID selector và sibling combinator. Nó chọn các phần tử <code>p</code> là anh em liền kề của phần tử <code>h2</code> có ID là "p123". Ví dụ, nếu có cấu trúc HTML như sau:</p>
+
+        <pre><code>
+        <h2 id="p123">Tiêu đề 1</h2>
+        <p>Đoạn văn 2</p>
+        </code></pre>
+
+        <p>Trong trường hợp này, định dạng CSS <code>h2#p123 + p</code> sẽ áp dụng cho phần tử <code>p</code> thứ hai, vì nó là anh em liền kề của phần tử <code>h2</code> có ID là "p123".</p>
+    </div>
+</body>
+</html>
